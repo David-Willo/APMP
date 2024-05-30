@@ -15,7 +15,8 @@ Contributers: [Jinhao He *](https://github.com/David-Willo/), [Huaiyang Huang *]
 ---
 ![ICRA24-Presentation](https://github.com/David-Willo/APMP/assets/14790278/d88a7654-1303-466a-aded-194527709156)
 
-
+---
+### example result (may need some time to load the gif):
 ![icra24-gif1-crop](https://github.com/David-Willo/APMP/assets/14790278/33d64966-26fc-427f-9b4f-4b4810b05ec9)
 
 
