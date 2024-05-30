@@ -47,17 +47,9 @@ catkin config --cmake-args -DCMAKE_BUILD_TYPE=Release
 ```
 
 ```
-catkin build sophus
-catkin build xslam_visual_localization
+TODO
 ```
 
-
-## tests
-
-```
-catkin test xslam_visual_features
-catkin test xslam_visual_localization
-```
 
 ## known issues:
 1. build error due to protobuf version mismatch.
@@ -67,4 +59,6 @@ update the CMakeList.txt of protobuf_catkin
 set(USE_SYSTEM_PROTOBUF "OFF") to compile with given version
 ```
 ## Getting Start:
+```
 TODO
+```
