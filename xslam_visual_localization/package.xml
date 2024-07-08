@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package format="2">
+    <name>xslam_visual_localization</name>
+    <version>0.0.0</version>
+    <description>visual localization</description>
+    <maintainer email="hhuangat@connect.ust.hk">hyhuang</maintainer>
+    <license>TBD</license>
+
+    <buildtool_depend>catkin</buildtool_depend>
+    <buildtool_depend>catkin_simple</buildtool_depend>
+
+    <depend>eigen_catkin</depend>
+    <!-- <depend>eigen_checks</depend> -->
+    <depend>gflags_catkin</depend>
+    <depend>glog_catkin</depend>
+
+    <depend>cv_bridge</depend>
+    <depend>geometry_msgs</depend>
+    <depend>sensor_msgs</depend>
+    <depend>roscpp</depend>
+    <depend>image_transport</depend>
+
+    <!-- <depend>sensors</depend>
+    <depend>vi_map</depend> -->
+    <depend>xslam_cv_cameras</depend>
+    <!-- <depend>maplab_common</depend> -->
+
+    <depend>g2o_catkin</depend>
+    <depend>g2o_types</depend>
+    <depend>PCL</depend>
+
+    <depend>grid_map_core</depend>
+    <depend>grid_map_ros</depend>
+    <depend>grid_map_pcl</depend>
+
+
+    <!-- <depend>pcl_catkin</depend> -->
+
+    <depend>tf2_ros</depend>
+
+    <depend>xslam_common</depend>
+    <depend>xslam_visual_types</depend>
+    <depend>xslam_visual_features</depend>
+    <depend>xslam_test_data</depend>
+    <!-- <depend>vi_map</depend> -->
+    <!-- <depend>minkindr</depend> -->
+    <!-- <depend>opencv3_catkin</depend> -->
+    <!-- <depend>protobuf_catkin</depend> -->
+    <!-- <depend>yaml_cpp_catkin</depend> -->
+</package>

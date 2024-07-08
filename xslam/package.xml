@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package format="2">
+    <name>xslam</name>
+    <version>0.0.0</version>
+    <description>xslam</description>
+    <maintainer email="hhuangat@connect.ust.hk">hyhuang</maintainer>
+    <license>TBD</license>
+
+    <buildtool_depend>catkin</buildtool_depend>
+    <buildtool_depend>catkin_simple</buildtool_depend>
+
+
+    <!-- <run_depend>xslam_lidar</run_depend> -->
+    <exec_depend>xslam_visual_localization</exec_depend>
+    <!-- <depend>vi_map</depend> -->
+    <!-- <depend>minkindr</depend> -->
+    <!-- <depend>opencv3_catkin</depend> -->
+    <!-- <depend>protobuf_catkin</depend> -->
+    <!-- <depend>yaml_cpp_catkin</depend> -->
+</package>

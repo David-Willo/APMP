@@ -1,0 +1,28 @@
+###
+ # @Author: David-Willo davidwillo@foxmail.com
+ # @Date: 2023-09-26 14:40:52
+ # @LastEditTime: 2024-07-07 07:12:46
+ # @LastEditors: David-Willo
+ # Jinhao HE (David Willo), IADC HKUST(GZ)
+ # Copyright (c) 2024 by davidwillo@foxmail.com, All Rights Reserved. 
+### 
+#! /bin/sh
+
+script_dir=$(dirname $0)
+# source $script_dir/utils.sh
+
+
+# echo "########## $dset"
+# printf -v seq_str '%02d' $dset
+
+
+
+rosrun xslam_visual_features convert_models \
+	--local_feature_model_path $(rospack find xslam_test_data)/test_models/superpoint.pt \
+	--global_feature_model_path $(rospack find xslam_test_data)/test_models/netvlad.pt \
+	--local_feature_output_path $(rospack find xslam_test_data)/test_models/superpoint_x86_3080_300x300_fp32.ts \
+	--global_feature_output_path $(rospack find xslam_test_data)/test_models/netvlad_x86_3080_300x300_fp32.ts \
+	--image_width=300 \
+	--image_height=300
+
+wait

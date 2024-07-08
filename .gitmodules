@@ -1,0 +1,45 @@
+[submodule "xslam_visual_localization/highfive"]
+	path = xslam_visual_localization/highfive
+	url = https://github.com/BlueBrain/HighFive.git
+[submodule "dependencies/Sophus"]
+	path = dependencies/Sophus
+	url = https://github.com/strasdat/Sophus.git
+[submodule "dependencies/fmt_catkin"]
+	path = dependencies/fmt_catkin
+	url = https://github.com/HyHuang1995/fmt_catkin.git
+[submodule "dependencies/g2o_catkin"]
+	path = dependencies/g2o_catkin
+	url = https://github.com/HyHuang1995/g2o_catkin.git
+[submodule "dependencies/torch_catkin"]
+	path = dependencies/torch_catkin
+	url = https://github.com/David-Willo/torch_catkin.git
+[submodule "dependencies/protobuf_catkin"]
+	path = dependencies/protobuf_catkin
+	url = https://github.com/ethz-asl/protobuf_catkin.git
+[submodule "dependencies/glog_catkin"]
+	path = dependencies/glog_catkin
+	url = https://github.com/ethz-asl/glog_catkin.git
+[submodule "dependencies/gflags_catkin"]
+	path = dependencies/gflags_catkin
+	url = https://github.com/ethz-asl/gflags_catkin.git
+[submodule "dependencies/ceres_catkin"]
+	path = dependencies/ceres_catkin
+	url = https://github.com/ethz-asl/ceres_catkin.git
+[submodule "dependencies/eigen_catkin"]
+	path = dependencies/eigen_catkin
+	url = https://github.com/ethz-asl/eigen_catkin.git
+[submodule "dependencies/yaml_cpp_catkin"]
+	path = dependencies/yaml_cpp_catkin
+	url = https://github.com/ethz-asl/yaml_cpp_catkin.git
+[submodule "dependencies/opencv3_catkin"]
+	path = dependencies/opencv3_catkin
+	url = https://github.com/ethz-asl/opencv3_catkin.git
+[submodule "dependencies/eigen_checks"]
+	path = dependencies/eigen_checks
+	url = https://github.com/ethz-asl/eigen_checks.git
+[submodule "dependencies/minkindr"]
+	path = dependencies/minkindr
+	url = https://github.com/ethz-asl/minkindr.git
+[submodule "dependencies/pcl_catkin"]
+	path = dependencies/pcl_catkin
+	url = https://github.com/ethz-asl/pcl_catkin.git

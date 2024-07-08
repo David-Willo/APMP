@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package format="2">
+    <name>g2o_types</name>
+    <version>0.0.0</version>
+    <description>definitions of g2o error terms</description>
+    <maintainer email="hhuangat@connect.ust.hk">hyhuang</maintainer>
+    <license>TBD</license>
+
+    <buildtool_depend>catkin</buildtool_depend>
+    <buildtool_depend>catkin_simple</buildtool_depend>
+
+    <depend>eigen_catkin</depend>
+    <depend>gflags_catkin</depend>
+    <depend>glog_catkin</depend>
+
+    <depend>xslam_common</depend>
+
+    <depend>g2o_catkin</depend>
+    <depend>xslam_cv_cameras</depend>
+
+    <!-- <depend>vi_map</depend> -->
+    <!-- <depend>minkindr</depend> -->
+    <!-- <depend>opencv3_catkin</depend> -->
+    <!-- <depend>protobuf_catkin</depend> -->
+    <!-- <depend>yaml_cpp_catkin</depend> -->
+</package>
