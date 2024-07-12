@@ -74,7 +74,7 @@ use /script/convert_model to compile your own model file
 
 
 ## Acknowledgements
-Our implementation refers to [ORB-SLAM2](https://github.com/raulmur/ORB_SLAM2), [hloc](https://github.com/cvg/Hierarchical-Localization), [SuperPointPretrainedNetwork](https://github.com/magicleap/SuperPointPretrainedNetwork), [maplab](https://github.com/ethz-asl/maplab)
+Our implementation refers to [ORB-SLAM2](https://github.com/raulmur/ORB_SLAM2), [hloc](https://github.com/cvg/Hierarchical-Localization), [SuperPointPretrainedNetwork](https://github.com/magicleap/SuperPointPretrainedNetwork), [maplab](https://github.com/ethz-asl/maplab), [DLIO](https://github.com/vectr-ucla/direct_lidar_inertial_odometry)
 We really appreciate these open source projects!
 
 ## Timeline
