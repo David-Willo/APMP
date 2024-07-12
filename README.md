@@ -6,7 +6,7 @@ This is a repository of the online localization module of:
 - A hierarchical visual tracking of [SuperPoint](https://github.com/magicleap/SuperPointPretrainedNetwork) features.
 - Visual map is compatible with [COLMAP](https://colmap.github.io/) format.
 
-Contributers: [Jinhao He *](https://github.com/David-Willo/), [Huaiyang Huang *](https://github.com/hyhuang1995), [Shuyang Zhang](https://github.com/ShuyangUni), [Jianhao Jiao](https://github.com/gogojjh), _et al._
+Contributers: [Jinhao He *](https://github.com/David-Willo/), [Huaiyang Huang *](https://github.com/hyhuang1995), [Shuyang Zhang](https://github.com/ShuyangUni), [Jianhao Jiao](https://github.com/gogojjh), Chengju Liu and Ming Liu.
 
 {*} for equal contribution
 
@@ -21,12 +21,12 @@ Contributers: [Jinhao He *](https://github.com/David-Willo/), [Huaiyang Huang *]
 
 # Build the project
 
-1. prerequisites
+### prerequisites
 
 ubuntu 20.04, ros-noetic, cuda-11.7, cudnn-8.5 
 
 
-2. clone repo
+### clone repo
 
 under a catkin workspace
 ```
@@ -40,7 +40,7 @@ due to lfs size limit, download and unzip extra dependencies
     - `torch_catkin`: catkin wrapper for libtorch and torch_tensorrt [repo](https://github.com/David-Willo/torch_catkin)
     - `xslam_test_data`: model files and sample data [download and extract](https://drive.google.com/drive/folders/10zBkkRtqMTM4WOV0tfBpXaTPjkfRnFPy?usp=sharing)
 
-3. build
+### build
 
 under catkin workspace
 
@@ -51,7 +51,7 @@ catkin config --merge-devel
 catkin config --cmake-args -DCMAKE_BUILD_TYPE=Release
 ```
 
-4. prepare data and run the script
+### prepare data and run the script
 
 Download [demo data](https://drive.google.com/file/d/1wfFz8Xjewd19Kv7yhrvV2TbMhVaxDo8Q/view?usp=sharing) and extract,
 
@@ -63,13 +63,26 @@ feature extraction and database generation can follow [hloc demo](https://github
 
 
 ## known issues:
-1. build error due to protobuf version mismatch.
+### build error due to protobuf version mismatch.
 
 update the CMakeList.txt of protobuf_catkin
 ```
 set(USE_SYSTEM_PROTOBUF "OFF") to compile with given version
 ```
-### Acknowledgements
+### hardware/image dimension mismatch
+use /script/convert_model to compile your own model file
+
+
+## Acknowledgements
 Our implementation refers to [ORB-SLAM2](https://github.com/raulmur/ORB_SLAM2), [hloc](https://github.com/cvg/Hierarchical-Localization), [SuperPointPretrainedNetwork](https://github.com/magicleap/SuperPointPretrainedNetwork), [maplab](https://github.com/ethz-asl/maplab)
 We really appreciate these open source projects!
 
+## Timeline
+- Early Release (2024-07-10)
+
+## Related Papers
+If our work has helped you, please cite:
+
+```
+TODO
+```
