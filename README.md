@@ -79,7 +79,7 @@ We really appreciate these open source projects!
 
 ## Timeline
 - Early Release (2024-07-10)
-
+- Beta Release (TODO)
 ## Related Papers
 If our work has helped you, please cite:
 
