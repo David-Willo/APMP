@@ -84,5 +84,13 @@ We really appreciate these open source projects!
 If our work has helped you, please cite:
 
 ```
-TODO
+@misc{he2024accuratepriorcentricmonocularpositioning,
+      title={Accurate Prior-centric Monocular Positioning with Offline LiDAR Fusion}, 
+      author={Jinhao He and Huaiyang Huang and Shuyang Zhang and Jianhao Jiao and Chengju Liu and Ming Liu},
+      year={2024},
+      eprint={2407.09091},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO},
+      url={https://arxiv.org/abs/2407.09091}, 
+}
 ```
