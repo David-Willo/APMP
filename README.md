@@ -1,7 +1,7 @@
 <!--
  * @Author: DavidWillo davidwillo@foxmail.com
  * @Date: 2024-07-16 15:24:42
- * @LastEditTime: 2024-07-16 18:40:11
+ * @LastEditTime: 2024-07-16 19:34:51
  * @LastEditors: DavidWillo
  * Jinhao HE (David Willo), IADC HKUST(GZ)
  * Copyright (c) 2024 by davidwillo@foxmail.com, All Rights Reserved. 
@@ -43,7 +43,7 @@ cd src
 git clone https://github.com/David-Willo/APMP.git --recursive
 
 ```
-due to lfs size limit, download and unzip extra dependencies
+due to lfs size limit, download extra dependencies to the dependency folder
 - `dependencies`: 
     - `torch_catkin`: catkin wrapper for libtorch and torch_tensorrt [repo](https://github.com/David-Willo/torch_catkin)
     - `xslam_test_data`: model files and sample data [download and extract](https://drive.google.com/drive/folders/10zBkkRtqMTM4WOV0tfBpXaTPjkfRnFPy?usp=sharing)
@@ -57,17 +57,17 @@ catkin init
 catkin config --extend /opt/ros/noetic
 catkin config --merge-devel
 catkin config --cmake-args -DCMAKE_BUILD_TYPE=Release
+catkin build sophus
+catkin build xslam_visual_localization
 ```
 
 ### prepare data and run the script
 
-Download [demo data](https://drive.google.com/file/d/1wfFz8Xjewd19Kv7yhrvV2TbMhVaxDo8Q/view?usp=sharing) and extract,
+- Download [demo data](https://drive.google.com/file/d/1wfFz8Xjewd19Kv7yhrvV2TbMhVaxDo8Q/view?usp=sharing) and extract to [datapath](datapath),
+    - the map database is compatible with the colmap sparse reconstruction format, 
+    - feature extraction and database generation can follow [hloc demo](https://github.com/cvg/Hierarchical-Localization/blob/master/demo.ipynb)
 
-update path in runner script (xslam/script/run_apmp.sh) and execute,
-
-the map database is compatible with the colmap sparse reconstruction format, 
-
-feature extraction and database generation can follow [hloc demo](https://github.com/cvg/Hierarchical-Localization/blob/master/demo.ipynb)
+- update parameters in runner script (xslam/script/run_apmp.sh) and execute,
 
 
 ## known issues:
@@ -85,11 +85,11 @@ set(GLOG_PREFER_EXPORTED_GLOG_CMAKE_CONFIGURATION False)
 ```
 or
 ```
-build & install an old version of glog (e.g. )
+build & install an old version of glog (e.g. v0.5.0-rc2)
 ```
-according to [issue543]https://github.com/google/glog/issues/543
+according to [issue543](https://github.com/google/glog/issues/543)
 
-### hardware/image dimension mismatch
+### hardware/model dimension mismatch
 use /script/convert_model to compile your own model file
 
 
