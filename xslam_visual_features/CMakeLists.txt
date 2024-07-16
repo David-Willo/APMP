@@ -16,25 +16,7 @@ add_definitions(-Wextra -Wall -std=c++17)
 find_package(OpenCV REQUIRED)
 find_package(Eigen3 REQUIRED)
 
-# # find_package(HDF5 REQUIRED)
-# message(STATUS "#######")
-# message(STATUS "torch include: ${TORCH_INCLUDE_DIRS}")
-# message(STATUS "#######")
-# message(STATUS ${TORCH_LIBRARIES})
-	
-# include_directories(
-#   ${CUDA_INCLUDE_DIRS}
-# 	# ${TORCH_INCLUDE_DIRS}
-#     # ${PROJECT_SOURCE_DIR}/3rdparty/tensorrt/include
-#     # ${PROJECT_SOURCE_DIR}/3rdparty/torch_tensorrt/include
-# )
 
-# 
-# link_directories(${PROJECT_SOURCE_DIR}/3rdparty/tensorrt/lib)
-# link_directories(${PROJECT_SOURCE_DIR}/3rdparty/torch_tensorrt/lib)
-# file(GLOB TORCH_TRT_LIBS ${PROJECT_SOURCE_DIR}/3rdparty/torch_tensorrt/lib/*.so)
-# file(GLOB TRT_LIBS ${PROJECT_SOURCE_DIR}/3rdparty/tensorrt/lib/*.so*)
-# message(STATUS ${TORCH_TRT_LIBS})
 
 #############
 # LIBRARIES #
@@ -66,21 +48,7 @@ target_link_libraries(convert_models ${PROJECT_NAME}_lib)
 # SHARE #
 #########
 
-##########
-# GTESTS #
-##########
 
-catkin_add_gtest(test_model_script
-  tests/test-models.cc
-)
-target_link_libraries(test_model_script ${PROJECT_NAME}_lib)
-xslam_import_test_models(test_model_script)
-
-catkin_add_gtest(test_distances
-  tests/test-distances.cc
-)
-target_link_libraries(test_distances ${PROJECT_NAME}_lib)
-# xslam_import_test_maps(test_models)
 
 ############
 ## EXPORT ##

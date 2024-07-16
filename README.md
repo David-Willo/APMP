@@ -1,3 +1,11 @@
+<!--
+ * @Author: DavidWillo davidwillo@foxmail.com
+ * @Date: 2024-07-16 15:24:42
+ * @LastEditTime: 2024-07-16 18:40:11
+ * @LastEditors: DavidWillo
+ * Jinhao HE (David Willo), IADC HKUST(GZ)
+ * Copyright (c) 2024 by davidwillo@foxmail.com, All Rights Reserved. 
+-->
 # APMP
 This is a repository of the online localization module of:
 
@@ -23,7 +31,7 @@ Contributers: [Jinhao He *](https://github.com/David-Willo/), [Huaiyang Huang *]
 
 ### prerequisites
 
-ubuntu 20.04, ros-noetic, cuda-11.7, cudnn-8.5 
+ubuntu 20.04, ros-noetic, cuda-11.7, cudnn-8.5 libgoogle-glog-dev faiss
 
 
 ### clone repo
@@ -69,6 +77,18 @@ update the CMakeList.txt of protobuf_catkin
 ```
 set(USE_SYSTEM_PROTOBUF "OFF") to compile with given version
 ```
+
+### undefined reference to `google::kLogSiteUninitialized'
+update dependencies/glog_catkin/cmake/Modules/FindGlog.cmake
+```
+set(GLOG_PREFER_EXPORTED_GLOG_CMAKE_CONFIGURATION False)
+```
+or
+```
+build & install an old version of glog (e.g. )
+```
+according to [issue543]https://github.com/google/glog/issues/543
+
 ### hardware/image dimension mismatch
 use /script/convert_model to compile your own model file
 

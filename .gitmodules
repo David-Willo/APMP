@@ -43,3 +43,6 @@
 [submodule "dependencies/pcl_catkin"]
 	path = dependencies/pcl_catkin
 	url = https://github.com/ethz-asl/pcl_catkin.git
+[submodule "dependencies/catkin_simple"]
+	path = dependencies/catkin_simple
+	url = https://github.com/catkin/catkin_simple.git

@@ -1,7 +1,7 @@
 **/3rdparty/
 data/
 .vscode
-
+dependencies/xslam_test_data
 # Compiled Object files
 *.slo
 *.lo

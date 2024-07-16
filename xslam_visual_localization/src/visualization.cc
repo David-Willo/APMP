@@ -1,8 +1,8 @@
 /*
  * @Author: David-Willo davidwillo@foxmail.com
  * @Date: 2023-04-13 08:32:50
- * @LastEditTime: 2024-07-02 06:13:45
- * @LastEditors: David-Willo
+ * @LastEditTime: 2024-07-16 19:11:05
+ * @LastEditors: DavidWillo
  * Jinhao HE (David Willo), IADC HKUST(GZ)
  * Copyright (c) 2024 by davidwillo@foxmail.com, All Rights Reserved. 
  */
@@ -238,51 +238,51 @@ void VisualizationVLoc::publishTransform(const VisualFrame::Ptr& frame, bool is_
   //   br.sendTransform(transformStamped);
   // }
 
-  {
-    // publish lidar frame odometry
-    geometry_msgs::TransformStamped transformStamped;
+  // {
+  //   // publish lidar frame odometry
+  //   geometry_msgs::TransformStamped transformStamped;
 
-    transformStamped.header.stamp = ros::Time::now();
-    transformStamped.header.frame_id = "map";
-    transformStamped.child_frame_id = "current_lidar";
-    // TODO(DW) to config
-    Vector3 t_c_l(-0.07105, -0.344159, -0.0341766);
-    Quaternion rot_c_l;
-    Matrix3 R_c_l;
-    R_c_l << 0.0171327,    -0.99982, -0.00809888,
-           0.0685358, 0.00925536,  -0.997606,
-           0.997502,  0.0165366,   0.068682;
-    rot_c_l = R_c_l;
+  //   transformStamped.header.stamp = ros::Time::now();
+  //   transformStamped.header.frame_id = "map";
+  //   transformStamped.child_frame_id = "current_lidar";
+  //   // TODO(DW) to config
+  //   Vector3 t_c_l(-0.07105, -0.344159, -0.0341766);
+  //   Quaternion rot_c_l;
+  //   Matrix3 R_c_l;
+  //   R_c_l << 0.0171327,    -0.99982, -0.00809888,
+  //          0.0685358, 0.00925536,  -0.997606,
+  //          0.997502,  0.0165366,   0.068682;
+  //   rot_c_l = R_c_l;
 
-    Vector3 t_w_l = rot_w_c * t_c_l.transpose() + t_w_c;
-    Quaternion rot_w_l = rot_w_c * rot_c_l;
+  //   Vector3 t_w_l = rot_w_c * t_c_l.transpose() + t_w_c;
+  //   Quaternion rot_w_l = rot_w_c * rot_c_l;
 
-    //  maybe to robot rare?
-    transformStamped.transform.translation.x = t_w_l.x();
-    transformStamped.transform.translation.y = t_w_l.y();
-    transformStamped.transform.translation.z = t_w_l.z();
+  //   //  maybe to robot rare?
+  //   transformStamped.transform.translation.x = t_w_l.x();
+  //   transformStamped.transform.translation.y = t_w_l.y();
+  //   transformStamped.transform.translation.z = t_w_l.z();
 
-    transformStamped.transform.rotation.x = rot_w_l.x();
-    transformStamped.transform.rotation.y = rot_w_l.y();
-    transformStamped.transform.rotation.z = rot_w_l.z();
-    transformStamped.transform.rotation.w = rot_w_l.w();
-    br.sendTransform(transformStamped);
+  //   transformStamped.transform.rotation.x = rot_w_l.x();
+  //   transformStamped.transform.rotation.y = rot_w_l.y();
+  //   transformStamped.transform.rotation.z = rot_w_l.z();
+  //   transformStamped.transform.rotation.w = rot_w_l.w();
+  //   br.sendTransform(transformStamped);
 
-    nav_msgs::Odometry odom_lidar;
-    odom_lidar.header.stamp = ros::Time::now();
-    odom_lidar.header.frame_id = "map";
+  //   nav_msgs::Odometry odom_lidar;
+  //   odom_lidar.header.stamp = ros::Time::now();
+  //   odom_lidar.header.frame_id = "map";
 
-    odom_lidar.pose.pose.position.x = t_w_l.x();
-    odom_lidar.pose.pose.position.y = t_w_l.y();
-    odom_lidar.pose.pose.position.z = t_w_l.z();
+  //   odom_lidar.pose.pose.position.x = t_w_l.x();
+  //   odom_lidar.pose.pose.position.y = t_w_l.y();
+  //   odom_lidar.pose.pose.position.z = t_w_l.z();
 
-    odom_lidar.pose.pose.orientation.x = rot_w_l.x();
-    odom_lidar.pose.pose.orientation.y = rot_w_l.y();
-    odom_lidar.pose.pose.orientation.z = rot_w_l.z();
-    odom_lidar.pose.pose.orientation.w = rot_w_l.w();
+  //   odom_lidar.pose.pose.orientation.x = rot_w_l.x();
+  //   odom_lidar.pose.pose.orientation.y = rot_w_l.y();
+  //   odom_lidar.pose.pose.orientation.z = rot_w_l.z();
+  //   odom_lidar.pose.pose.orientation.w = rot_w_l.w();
 
-    pub_odom_lidar_.publish(odom_lidar);
-  }
+  //   pub_odom_lidar_.publish(odom_lidar);
+  // }
 }
 
 

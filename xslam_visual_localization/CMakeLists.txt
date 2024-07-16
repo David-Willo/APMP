@@ -39,8 +39,7 @@ target_link_libraries(${PROJECT_NAME}_lib HighFive faiss lapack ${PCL_LIBRARIES}
 cs_add_executable(visual_localization_node nodes/visual-localization-node.cc)
 target_link_libraries(visual_localization_node ${PROJECT_NAME}_lib)
 
-cs_add_executable(evaluate_map nodes/evaluate_map.cc)
-target_link_libraries(evaluate_map ${PROJECT_NAME}_lib)
+
 
 # cs_add_executable(test_minkindr_tf test/test_minkindr_tf.cpp)
 
@@ -48,29 +47,7 @@ target_link_libraries(evaluate_map ${PROJECT_NAME}_lib)
 # SHARE #
 #########
 
-##########
-# GTESTS #
-##########
 
-catkin_add_gtest(test_map_io_sample
-  tests/test-map-loading.cc
-)
-target_link_libraries(test_map_io_sample ${PROJECT_NAME}_lib)
-xslam_import_test_maps(test_map_io_sample)
-
-catkin_add_gtest(test_feature_extraction
-  tests/test-feature-extraction.cc
-)
-target_link_libraries(test_feature_extraction ${PROJECT_NAME}_lib)
-xslam_import_test_maps(test_feature_extraction)
-xslam_import_test_models(test_feature_extraction)
-
-catkin_add_gtest(test_relocalization
-  tests/test-relocalization.cc
-)
-target_link_libraries(test_relocalization ${PROJECT_NAME}_lib)
-xslam_import_test_maps(test_relocalization)
-xslam_import_test_models(test_relocalization)
 
 ############
 ## EXPORT ##

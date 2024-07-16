@@ -29,9 +29,6 @@
     <depend>g2o_types</depend>
     <depend>PCL</depend>
 
-    <depend>grid_map_core</depend>
-    <depend>grid_map_ros</depend>
-    <depend>grid_map_pcl</depend>
 
 
     <!-- <depend>pcl_catkin</depend> -->

@@ -1,8 +1,8 @@
 /*
  * @Author: David-Willo davidwillo@foxmail.com
  * @Date: 2023-04-13 08:32:50
- * @LastEditTime: 2024-07-02 07:10:09
- * @LastEditors: David-Willo
+ * @LastEditTime: 2024-07-16 17:03:14
+ * @LastEditors: DavidWillo
  * Jinhao HE (David Willo), IADC HKUST(GZ)
  * Copyright (c) 2024 by davidwillo@foxmail.com, All Rights Reserved. 
  */
@@ -495,9 +495,9 @@ Matching::Result Matching::matchAgainstFrameIVF(
   auto&& [desc_query, keypoint_indices] = frame->descriptors_untracked();
   int num_query = desc_query.cols();
   CHECK_EQ(num_query, keypoint_indices.size());
-  using idx_t = faiss::idx_t;
+  using idx_t = faiss::Index::idx_t;
 
-  std::vector<faiss::idx_t> ref_inds(k * num_query);
+  std::vector<faiss::Index::idx_t> ref_inds(k * num_query);
   std::vector<float> ref_dists(k * num_query);
   index->search(desc_query.cols(), (float*)desc_query.data(), 2,
                 ref_dists.data(), ref_inds.data());
@@ -564,9 +564,9 @@ Matching::Result Matching::matchAgainstCluster(
   int k = 2;
   MatrixXb desc_query = frame->descriptors();
   int num_query = desc_query.cols();
-  using idx_t = faiss::idx_t;
+  using idx_t =  faiss::Index::idx_t;
 
-  std::vector<faiss::idx_t> ref_inds(k * num_query);
+  std::vector<faiss::Index::idx_t> ref_inds(k * num_query);
   std::vector<float> ref_dists(k * num_query);
   index.search(desc_query.cols(), (float*)desc_query.data(), 2,
                ref_dists.data(), ref_inds.data());
