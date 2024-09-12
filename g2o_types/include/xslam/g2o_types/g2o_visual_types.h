@@ -1,11 +1,3 @@
-/*** 
- * @Author: David-Willo davidwillo@foxmail.com
- * @Date: 2023-04-13 08:32:50
- * @LastEditTime: 2023-08-18 02:29:13
- * @LastEditors: David-Willo
- * @Jinhao HE (David Willo), IADC HKUST(GZ)
- * @Copyright (c) 2023 by davidwillo@foxmail.com, All Rights Reserved. 
- */
 /**
  * @file g2o_visual_types.h
  * @author hyhuang hhuangat@gmail.com
