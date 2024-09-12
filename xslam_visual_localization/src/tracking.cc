@@ -1,15 +1,3 @@
-/**
- * @file tracking.cc
- * @author hyhuang hhuangat@gmail.com
- * @brief
- * @version 0.1
- * @date 2023-03-21
- *
- * @copyright Copyright (c) 2023
- *
- */
-
-#include "xslam/visual-localization/tracking.h"
 /*
  * @Author: David-Willo davidwillo@foxmail.com
  * @Date: 2023-04-13 08:32:50
@@ -18,6 +6,9 @@
  * Jinhao HE (David Willo), IADC HKUST(GZ)
  * Copyright (c) 2024 by davidwillo@foxmail.com, All Rights Reserved. 
  */
+
+#include "xslam/visual-localization/tracking.h"
+
 #include "xslam/common/logging.h"
 #include "xslam/visual-localization/matching.h"
 #include "xslam/visual-localization/optimization.h"
